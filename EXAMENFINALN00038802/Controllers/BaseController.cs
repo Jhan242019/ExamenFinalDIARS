@@ -14,11 +14,5 @@ namespace EXAMENFINALN00038802.Controllers
         {
             this.context = context;
         }
-        protected User LoggedUser()
-        {
-            var claim = HttpContext.User.Claims.FirstOrDefault();
-            var user = context.Users.Where(o => o.Username == claim.Value).FirstOrDefault();
-            return user;
-        }
     }
 }

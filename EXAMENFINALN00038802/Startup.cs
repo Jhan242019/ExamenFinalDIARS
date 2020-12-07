@@ -30,8 +30,6 @@ namespace EXAMENFINALN00038802
             services.AddDbContext<ExamenFinalContext>(
                   options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection"))
           );
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(option => { option.LoginPath = "/Auth/Login"; });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace EXAMENFINALN00038802.Models
 {
-    public class User
+    public class Nota
     {
-        public int Id { get; set; }
+        public int Id { set; get; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        public string Username { get; set; }
+        public string Titulo { set; get; }
+
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        [DataType(DataType.Password)]
-        [MinLength(6)]
-        public string Password { get; set; }
+        public DateTime Fecha { set; get; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
+        public string Contenido { set; get; }
     }
 }

@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace EXAMENFINALN00038802.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

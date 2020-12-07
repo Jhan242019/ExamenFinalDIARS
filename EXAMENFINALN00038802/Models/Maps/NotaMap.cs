@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace EXAMENFINALN00038802.Models.Maps
 {
-    public class UserMap : IEntityTypeConfiguration<User>
+    public class NotaMap : IEntityTypeConfiguration<Nota>
     {
 
-        public void Configure(EntityTypeBuilder<User> builder)
+        public void Configure(EntityTypeBuilder<Nota> builder)
         {
-            builder.ToTable("Usuario");
+            builder.ToTable("Nota");
             builder.HasKey(o => o.Id);
         }
     }

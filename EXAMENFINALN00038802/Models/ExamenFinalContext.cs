@@ -9,13 +9,19 @@ namespace EXAMENFINALN00038802.Models
 {
     public class ExamenFinalContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
+        public DbSet<Nota> Notas { get; set; }
+        public DbSet<Etiqueta> Etiquetas { get; set; }
+        public DbSet<EtiquetaNota> EtiquetaNotas { get; set; }
 
         public ExamenFinalContext(DbContextOptions<ExamenFinalContext> options)
     : base(options) { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new UserMap());
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new NotaMap());
+            modelBuilder.ApplyConfiguration(new EtiquetaMap());
+            modelBuilder.ApplyConfiguration(new EtiquetaNotaMap());
         }
 
     }
